@@ -27,3 +27,24 @@ Directives =>
 Controle flow - @if, @for, @switch
 
 Routing=> routs, router-outlate, routerLink, routerLinkActive
+
+-- Angular Life Cycle hooks
+
+1. ngOnChanges - When the value of an input binding to the component changes, this hook is called.
+2. ngOnInit - Once the component has been initialized and its input bindings have been handled, this hook is invoked.
+3. ngDoCheck -Every change detection cycle ends with a call to this hook. Because of the performance ramifications, it is frequently regarded as an anti-pattern.
+4. ngAfterContentInit -After the projected content (content projected into the component with <ng-content>) has been initialized, this hook is invoked.
+5. ngAfterContentChecked -This hook is invoked at the end of each change detection cycle for the projected content.
+6. ngAfterViewInit - After the component's view (including its children) has been fully initialized, this hook is called.
+7. ngAfterViewChecked -This hook is invoked at the end of each change detection cycle for the component's view.
+8. ngOnDestroy- When the component is destroyed, this hook is called.
+
+-- What is an HTTP Interceptor? https://medium.com/@jaydeepvpatil225/http-interceptors-in-angular-6e9891ae0538
+· HTTP Interceptors are a concept in web development and server-side programming, typically associated with web frameworks and libraries.
+· These interceptors allow developers to intercept and handle HTTP requests and responses globally within an application.
+	
+Uses Interceptor
+	1. Logging Interceptor
+	2. Adding Headers to Requests
+	3. Error Handling Interceptor
+	4. Authentication Interceptor
