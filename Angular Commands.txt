@@ -1,0 +1,29 @@
+Angular youtube channel: https://www.youtube.com/watch?v=QjaNv7s1gW0&t=1510s
+Swagger API Link= https://freeapi.miniprojectideas.com/index.html
+Bootstrap= https://www.w3schools.com/bootstrap5/bootstrap_button_groups.php
+url: localhost:4209
+
+node --version -to check which node version are installed in system
+npm --version -to check which angular version are installed in system
+npm install -g @angular/cli -to install angular globally
+ng new MyAngularApp  -To create new angular project.
+cd projectname and Enter
+code . -To open your angular project into visual studio code.
+ng serve -To run your angular application
+npm install -g npm@6.14.12 OR npm install -g npm@version-number OR npm install -g npm@latest -To downgrade the npm version
+npm i bootstrap -- To add bootstrap in to a project
+ng serve --port 4209
+
+Types of Data Binding?
+1. Interpolation binding - {{firstName}}
+2. Property / type binding - [value]="firstName"
+3. Two way data binding using ngModel - [(ngModel)]="firstName"
+4. Event Binding- (click)="showWelcomeAlert()
+
+Directives => 
+1. Structural - Responsible for change the structure of the Dom -- ngIf, ngFor,  ngClass, ngStyle
+2. attribute - It can add extra beheavior in existing element 
+
+Controle flow - @if, @for, @switch
+
+Routing=> routs, router-outlate, routerLink, routerLinkActive

@@ -1,0 +1,86 @@
+<p>role works!</p>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-border">
+            <thead>
+                <tr>
+                    <th>Sr. No</th>
+                    <th>Role Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let role of roleList, let srno=index">
+                    <td>{{srno+1}}</td>
+                    <td>{{role.role}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-4">
+        <ul>
+            <li *ngFor="let item of roleList">{{item.role}}</li>
+        </ul>
+    </div>
+</div> -->
+
+
+<!-- Interpolation binding -->
+<!-- <div class="row">
+    <div class="col-3">
+        <p>{{firstName}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{currentDate}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{angularVersion}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{selectState}}</p>
+    </div>
+</div> -->
+
+<!-- Property / Type binding -->
+<!-- <div class="row">
+    <div class="col-3">
+        <input type="text" [value]="firstName" class="form-control" />
+    </div>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="firstName" />
+    </div>
+    <div class="col-3">
+        <input [type]="inputType" />
+    </div>
+</div> -->
+
+<!-- Two way data binding using ngModel -->
+<!-- <div class="row">
+    <div class="col-3">
+        <input type="text" [(ngModel)]="firstName" />
+    </div>
+    <div class="col-3">
+        <select [(ngModel)]="selectState">
+            <option value="MH">MH</option>
+            <option value="MP">MP</option>
+            <option value="UP">UP</option>
+            <option value="Goa">GOA</option>
+        </select>
+    </div>
+</div> -->
+
+<!-- Event Binding -->
+<!-- <div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="showWelcomeAlert()">Show Alert</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-success" (click)="showWelcomeAlertMessage('Show React')">Show React</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-success" (click)="showWelcomeAlertMessage('Show Dot Net')">Show DotNet</button>
+    </div>
+</div> -->
