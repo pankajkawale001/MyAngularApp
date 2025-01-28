@@ -10,18 +10,29 @@ import { environment } from '../../environments/environment.development';
 })
 export class ClientService {
 
-
   constructor(private http: HttpClient) { }
 
-  getAllClients():Observable<APIResponseModel>{
-    return this.http.get<APIResponseModel>(environment.API_URL+"GetAllClients");
+  getAllEmployee(): Observable<APIResponseModel> {
+    return this.http.get<APIResponseModel>(environment.API_URL + "GetAllEmployee");
   }
 
-  addUpdate(obj:Client):Observable<APIResponseModel>{
-    return this.http.post<APIResponseModel>(environment.API_URL+"AddUpdateClient", obj);
+  getAllClientProject(): Observable<APIResponseModel> {
+    return this.http.get<APIResponseModel>(environment.API_URL + "GetAllClientProjects");
   }
 
-  deleyteClientById(id:number):Observable<APIResponseModel>{
-    return this.http.delete<APIResponseModel>(environment.API_URL+"DeleteClientByClientId"+id);
+  getAllClients(): Observable<APIResponseModel> {
+    return this.http.get<APIResponseModel>(environment.API_URL + "GetAllClients");
+  }
+
+  addUpdate(obj: Client): Observable<APIResponseModel> {
+    return this.http.post<APIResponseModel>(environment.API_URL + "AddUpdateClient", obj);
+  }
+
+  deleteClientById(id: number): Observable<APIResponseModel> {
+    return this.http.delete<APIResponseModel>(environment.API_URL + "DeleteClientByClientId" + id);
+  }
+
+  addUpdateClientProject(obj: Client): Observable<APIResponseModel> {
+    return this.http.post<APIResponseModel>(environment.API_URL + "AddUpdateClientProject", obj);
   }
 }

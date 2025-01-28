@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { MasterComponent } from './componants/master/master.component';
 import { EmployeeComponent } from './componants/employee/employee.component';
 import { ClientComponent } from './componants/client/client.component';
+import { ClientProjectComponent } from './componants/client-project/client-project.component';
 
 export const routes: Routes = [
     {
@@ -20,5 +21,9 @@ export const routes: Routes = [
     {
         path: 'client',
         component: ClientComponent
+    },
+    {
+        path: 'client-project',
+        component: ClientProjectComponent
     }
 ];

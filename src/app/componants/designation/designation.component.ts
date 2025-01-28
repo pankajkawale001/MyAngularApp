@@ -16,8 +16,8 @@ export class DesignationComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.masterService.getDesignation().subscribe((result: APIResponseModel) => {
-      this.designationList = result.data;
+    this.masterService.getDesignation().subscribe((res: APIResponseModel) => {
+      this.designationList = res.data;
       this.isLoader = false;
     }, error => {
       alert();

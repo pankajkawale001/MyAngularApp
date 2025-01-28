@@ -21,8 +21,8 @@ Types of Data Binding?
 4. Event Binding- (click)="showWelcomeAlert()
 
 Directives => 
-1. Structural - Responsible for change the structure of the Dom -- ngIf, ngFor,  ngClass, ngStyle
-2. attribute - It can add extra beheavior in existing element 
+1. Structural - Responsible for change the structure of the Dom -- ngIf, ngFor, ngSwitch
+2. attribute - It can add extra beheavior in existing element - ngClass, ngStyle and ngModel
 
 Controle flow - @if, @for, @switch
 
@@ -39,12 +39,86 @@ Routing=> routs, router-outlate, routerLink, routerLinkActive
 7. ngAfterViewChecked -This hook is invoked at the end of each change detection cycle for the component's view.
 8. ngOnDestroy- When the component is destroyed, this hook is called.
 
--- What is an HTTP Interceptor? https://medium.com/@jaydeepvpatil225/http-interceptors-in-angular-6e9891ae0538
+
+-- What is an HTTP Interceptor?
+
+ https://medium.com/@jaydeepvpatil225/http-interceptors-in-angular-6e9891ae0538
 · HTTP Interceptors are a concept in web development and server-side programming, typically associated with web frameworks and libraries.
 · These interceptors allow developers to intercept and handle HTTP requests and responses globally within an application.
 	
-Uses Interceptor
+-- Uses Interceptor
+  These interceptors allow developers to intercept and handle HTTP requests and responses globally within an application.
+· HTTP Interceptors in Angular are classes that implement the HttpInterceptor interface.
+· They can be used to perform various tasks related to HTTP requests and responses, 
+  such as adding headers, handling errors, modifying the request or response data, logging, authentication, etc.
+· HttpInterceptor defines a single method called intercept, which takes two parameters: the HttpRequest and the HttpHandler.
 	1. Logging Interceptor
 	2. Adding Headers to Requests
 	3. Error Handling Interceptor
 	4. Authentication Interceptor
+	5. Separation of concerns
+	6. Security and authentication
+	7. Caching and request/response manipulation
+	7. Easy integration with third-party libraries
+	8. Global application-level modifications
+
+-- Pipes in angular
+
+	The pipe() function, in Angular provides a variety of functionalities that streamline and enhance data manipulation.
+
+	Data Formatting : Pipes have applications, for organizing data like adjusting dates, numbers, currency and more.
+	Data Filtering: Pipes are capable of sorting, searching, or presenting subsets of data by filtering data according to predefined criteria.
+	Data Transformation: Data can be transformed by pipes using operations like title case, lowercase, and uppercase, among others.
+	Localization: Pipes are handy for managing localization and internationalization of data like translating text or presenting dates, in formats.
+
+1. Built-in Pipes
+	DatePipe
+	UpperCasePipe 
+	LowerCasePipe 
+	CurrencyPipe 
+2. Custom Pipes
+3. Async pipe -The AsyncPipe subscribes to an observable or promise and returns the latest value it has emitted. 
+When a new value is emitted, the pipe marks the component to be checked for changes.
+
+-- Async and Await in JavaScript
+
+Async and Await in JavaScript is used to simplify handling asynchronous operations using promises. 
+By enabling asynchronous code to appear synchronous, they enhance code readability and make it easier to manage complex asynchronous flows.
+
+Improved Readability: Async and Await allow asynchronous code to be written in a synchronous style, making it easier to read and understand.
+Error Handling: Using try/catch blocks with async/await simplifies error handling.
+Avoids Callback Hell: Async and Await prevent nested callbacks and complex promise chains, making the code more linear and readable.
+Better Debugging: Debugging async/await code is more intuitive since it behaves similarly to synchronous code.
+
+-- @Input() and @Output() properties
+
+@Input() and @Output() allow Angular to share data between the parent context and child directives or components. 
+An @Input() property is writable while an @Output() property is observable.
+
+How to use @Input()
+Use the @Input() decorator in a child component or directive to let Angular know that a property in that component can 
+receive its value from its parent component. It helps to remember that the data flow is from the perspective of the child component. 
+So an @Input() allows data to be input into the child component from the parent component.
+
+export class ItemDetailComponent {
+  @Input() item: string; // decorate the property with @Input()
+}
+
+
+-- How to use @Output()
+Use the @Output() decorator in the child component or directive to allow data to flow from the child out to the parent.
+An @Output() property should normally be initialized to an Angular EventEmitter with values flowing out of the component as events.
+
+@Output() newItemEvent = new EventEmitter<string>();
+export class ItemOutputComponent {
+
+  @Output() newItemEvent = new EventEmitter<string>();
+
+  addNewItem(value: string) {
+    this.newItemEvent.emit(value);
+  }
+}
+
+-- What are signals?
+A signal is a wrapper around a value that notifies interested consumers when that value changes. 
+Signals can contain any value, from primitives to complex data structures.
